@@ -4,597 +4,576 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Umeed Foundation | Together We Can</title>
+    <title>Umeed Foundation | Making a Difference</title>
+
+    <meta name="description"
+          content="Umeed Foundation works to improve education, healthcare and opportunities for communities.">
 
     <link rel="stylesheet" href="style.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
           rel="stylesheet">
 </head>
 
 <body>
+
+    <!-- Announcement Bar -->
+    <div class="topbar">
+        <div class="container topbar-content">
+            <p>Small acts. Lasting change.</p>
+            <p>✉ hello@umeedfoundation.org | ☎ +91 98765 43210</p>
+        </div>
+    </div>
 
     <!-- Navigation -->
     <header class="header">
         <div class="container navbar">
 
             <a href="#home" class="logo">
-                <span class="logo-icon">♡</span>
-                <span>umeed<span class="logo-highlight">.</span>
+                <span class="logo-icon">♥</span>
+
+                <span>
+                    <strong>umeed<span class="logo-dot">.</span></strong>
                     <small>FOUNDATION</small>
                 </span>
             </a>
 
-            <button class="menu-toggle" id="menuToggle"
-                    aria-label="Toggle navigation">
+            <button class="menu-toggle"
+                    id="menuToggle"
+                    aria-label="Toggle navigation"
+                    aria-expanded="false">
                 ☰
             </button>
 
             <nav class="nav-links" id="navLinks">
                 <a href="#home">Home</a>
                 <a href="#about">About Us</a>
-                <a href="#causes">Our Causes</a>
+                <a href="#programs">Our Work</a>
                 <a href="#impact">Our Impact</a>
                 <a href="#contact">Contact</a>
-                <a href="#donate" class="donate-btn">Donate Now ↗</a>
             </nav>
+
+            <a href="#donate" class="btn btn-primary nav-donate">
+                Donate Now ↗
+            </a>
 
         </div>
     </header>
 
-
     <!-- Hero Section -->
-    <section class="hero" id="home">
+    <main>
 
-        <div class="hero-overlay"></div>
+        <section class="hero" id="home">
+            <div class="container hero-grid">
 
-        <div class="container hero-content">
+                <div class="hero-content">
 
-            <span class="hero-tag">
-                ♥ EVERY LIFE MATTERS
-            </span>
+                    <span class="eyebrow">
+                        <span class="eyebrow-line"></span>
+                        TOGETHER, WE CAN DO MORE
+                    </span>
 
-            <h1>
-                Be The Reason<br>
-                Someone <span>Smiles.</span>
-            </h1>
+                    <h1>
+                        Every life deserves
+                        <em>a little more hope.</em>
+                    </h1>
 
-            <p>
-                Together, we can create a world where every child
-                gets an education, every family gets food, and
-                every person gets a chance to live with dignity.
+                    <p class="hero-description">
+                        We work with communities to make education accessible,
+                        healthcare stronger and brighter futures possible
+                        for every child.
+                    </p>
+
+                    <div class="hero-buttons">
+                        <a href="#donate" class="btn btn-primary">
+                            Make a Difference ↗
+                        </a>
+
+                        <a href="#about" class="btn btn-secondary">
+                            Discover Our Mission →
+                        </a>
+                    </div>
+
+                    <div class="hero-note">
+                        <div class="hero-note-icon">♥</div>
+
+                        <div>
+                            <strong>Every contribution matters</strong>
+                            <p>Be part of a kinder tomorrow.</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="hero-image-wrapper">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=1000&q=85"
+                        alt="Children learning and growing together"
+                        class="hero-image">
+
+                    <div class="image-label">
+                        <span>✳</span>
+
+                        <div>
+                            <strong>Hope in Action</strong>
+                            <p>One community at a time</p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Impact Section -->
+        <section class="impact-section" id="impact">
+            <div class="container impact-grid">
+
+                <div class="impact-heading">
+                    <span class="eyebrow">OUR IMPACT</span>
+                    <h2>Hope looks like <em>real change.</em></h2>
+                </div>
+
+                <div class="impact-item">
+                    <h3>1,200+</h3>
+                    <p>Children Supported</p>
+                </div>
+
+                <div class="impact-item">
+                    <h3>48</h3>
+                    <p>Community Programs</p>
+                </div>
+
+                <div class="impact-item">
+                    <h3>26</h3>
+                    <p>Communities Reached</p>
+                </div>
+
+                <div class="impact-item">
+                    <h3>320+</h3>
+                    <p>Volunteers</p>
+                </div>
+
+            </div>
+
+            <p class="impact-disclaimer container">
+                Demo figures: replace these with your NGO's verified statistics.
             </p>
+        </section>
 
-            <div class="hero-buttons">
-                <a href="#donate" class="btn btn-primary">
-                    Donate Today <span>↗</span>
-                </a>
+        <!-- About Section -->
+        <section class="section about-section" id="about">
+            <div class="container about-grid">
 
-                <a href="#about" class="btn btn-outline">
-                    Discover Our Mission
-                </a>
+                <div class="about-image-wrapper">
+                    <img
+                        src="https://images.unsplash.com/photo-1509099836639-18ba1795216d?auto=format&fit=crop&w=900&q=85"
+                        alt="A volunteer supporting children's education"
+                        class="about-image"
+                        loading="lazy">
+
+                    <div class="about-badge">
+                        <span>✳</span>
+                        <strong>Care that<br>creates change</strong>
+                    </div>
+                </div>
+
+                <div class="about-content">
+
+                    <span class="eyebrow">
+                        <span class="eyebrow-line"></span>
+                        WHO WE ARE
+                    </span>
+
+                    <h2>
+                        Kindness is where
+                        <em>change begins.</em>
+                    </h2>
+
+                    <p>
+                        Umeed Foundation is dedicated to helping communities
+                        build stronger, healthier and more hopeful futures.
+                    </p>
+
+                    <p>
+                        Through education, healthcare awareness and
+                        community partnerships, we aim to create
+                        opportunities that last.
+                    </p>
+
+                    <div class="about-points">
+
+                        <div class="about-point">
+                            <span>✓</span>
+
+                            <div>
+                                <strong>Community First</strong>
+                                <p>Working together to find meaningful solutions.</p>
+                            </div>
+                        </div>
+
+                        <div class="about-point">
+                            <span>✓</span>
+
+                            <div>
+                                <strong>Care with Dignity</strong>
+                                <p>Respectful support for people and families.</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <a href="#programs" class="text-link">
+                        Learn More About Us →
+                    </a>
+
+                </div>
             </div>
+        </section>
 
-            <div class="hero-note">
-                <div class="small-hearts">♥ ♥ ♥</div>
+        <!-- Programs Section -->
+        <section class="section programs-section" id="programs">
+            <div class="container">
+
+                <div class="section-heading">
+                    <div>
+                        <span class="eyebrow">
+                            <span class="eyebrow-line"></span>
+                            WHAT WE DO
+                        </span>
+
+                        <h2>Small steps, <em>big possibilities.</em></h2>
+                    </div>
+
+                    <p>
+                        We focus on essential needs that help individuals,
+                        families and communities thrive.
+                    </p>
+                </div>
+
+                <div class="program-grid">
+
+                    <article class="program-card">
+                        <div class="program-image">
+                            <img
+                                src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=700&q=80"
+                                alt="Students learning in a classroom"
+                                loading="lazy">
+
+                            <span class="program-number">01</span>
+                        </div>
+
+                        <div class="program-content">
+                            <span class="program-category">LEARN</span>
+                            <h3>Education for All</h3>
+
+                            <p>
+                                Learning resources, mentoring and educational
+                                opportunities for children.
+                            </p>
+
+                            <a href="#contact">Explore Program ↗</a>
+                        </div>
+                    </article>
+
+                    <article class="program-card">
+                        <div class="program-image">
+                            <img
+                                src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=700&q=80"
+                                alt="Healthcare professional providing support"
+                                loading="lazy">
+
+                            <span class="program-number">02</span>
+                        </div>
+
+                        <div class="program-content">
+                            <span class="program-category">CARE</span>
+                            <h3>Health & Wellbeing</h3>
+
+                            <p>
+                                Health awareness and better access to
+                                essential community care.
+                            </p>
+
+                            <a href="#contact">Explore Program ↗</a>
+                        </div>
+                    </article>
+
+                    <article class="program-card">
+                        <div class="program-image">
+                            <img
+                                src="https://images.unsplash.com/photo-1529390079861-591de354faf5?auto=format&fit=crop&w=700&q=80"
+                                alt="Community members working together"
+                                loading="lazy">
+
+                            <span class="program-number">03</span>
+                        </div>
+
+                        <div class="program-content">
+                            <span class="program-category">GROW</span>
+                            <h3>Skills & Livelihoods</h3>
+
+                            <p>
+                                Skills and opportunities that help families
+                                work towards a better future.
+                            </p>
+
+                            <a href="#contact">Explore Program ↗</a>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Quote Section -->
+        <section class="quote-section">
+            <div class="container quote-content">
+
+                <span class="quote-symbol">“</span>
+
                 <div>
-                    <strong>Every small act counts.</strong>
-                    <p>Let's build a better tomorrow together.</p>
-                </div>
-            </div>
+                    <p class="quote-text">
+                        When we give someone the tools to grow,
+                        we help a whole community imagine what's possible.
+                    </p>
 
-        </div>
-
-        <div class="hero-bottom">
-            <span>01 — HOPE</span>
-            <span>02 — CARE</span>
-            <span>03 — CHANGE</span>
-        </div>
-
-    </section>
-
-
-    <!-- Impact Numbers -->
-    <section class="impact-bar" id="impact">
-
-        <div class="container impact-grid">
-
-            <div class="impact-heading">
-                <span class="section-label">OUR IMPACT</span>
-                <h2>Small Steps.<br>Big Changes.</h2>
-            </div>
-
-            <div class="impact-item">
-                <div class="impact-icon">♡</div>
-                <h3><span class="counter" data-target="1200">0</span>+</h3>
-                <p>Children Supported</p>
-            </div>
-
-            <div class="impact-item">
-                <div class="impact-icon">✿</div>
-                <h3><span class="counter" data-target="8500">0</span>+</h3>
-                <p>Meals Distributed</p>
-            </div>
-
-            <div class="impact-item">
-                <div class="impact-icon">♧</div>
-                <h3><span class="counter" data-target="42">0</span>+</h3>
-                <p>Community Projects</p>
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- About Section -->
-    <section class="about section-padding" id="about">
-
-        <div class="container about-grid">
-
-            <div class="about-image">
-
-                <img
-                    src="https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?auto=format&fit=crop&w=1000&q=85"
-                    alt="Volunteers helping the community">
-
-                <div class="image-badge">
-                    <span>♥</span>
-                    <strong>10+ Years</strong>
-                    <small>Of spreading hope</small>
+                    <p class="quote-author">
+                        A shared belief <span>— The heart of our mission</span>
+                    </p>
                 </div>
 
             </div>
+        </section>
 
-            <div class="about-content">
+        <!-- Get Involved -->
+        <section class="section involvement-section" id="get-involved">
+            <div class="container involvement-grid">
 
-                <span class="section-label">WHO WE ARE</span>
+                <div>
+                    <span class="eyebrow">
+                        <span class="eyebrow-line"></span>
+                        BE PART OF THE CHANGE
+                    </span>
 
-                <h2>
-                    We Believe In A<br>
-                    World Full Of <span>Hope.</span>
-                </h2>
+                    <h2>
+                        Good things happen
+                        when <em>we come together.</em>
+                    </h2>
 
-                <p>
-                    Umeed Foundation is a community-focused NGO
-                    committed to making a positive difference in
-                    the lives of underprivileged people.
-                </p>
+                    <p>
+                        Your time, skills and support can help turn hope
+                        into action. There is a place for everyone.
+                    </p>
 
-                <p>
-                    Through education, food assistance, healthcare
-                    awareness and community support, we work towards
-                    a future where everyone has the opportunity to thrive.
-                </p>
+                    <a href="#contact" class="btn btn-primary">
+                        Join Our Community ↗
+                    </a>
+                </div>
 
-                <div class="about-features">
+                <div class="involvement-list">
 
-                    <div class="feature">
-                        <span>✓</span>
+                    <a href="#donate" class="involvement-item">
+                        <span class="involvement-icon">♡</span>
+
+                        <span>
+                            <strong>Become a Donor</strong>
+                            <small>Support meaningful community work.</small>
+                        </span>
+
+                        <b>↗</b>
+                    </a>
+
+                    <a href="#contact" class="involvement-item">
+                        <span class="involvement-icon">✳</span>
+
+                        <span>
+                            <strong>Volunteer Your Time</strong>
+                            <small>Share your skills and experience.</small>
+                        </span>
+
+                        <b>↗</b>
+                    </a>
+
+                    <a href="#contact" class="involvement-item">
+                        <span class="involvement-icon">⌂</span>
+
+                        <span>
+                            <strong>Partner With Us</strong>
+                            <small>Create a bigger impact together.</small>
+                        </span>
+
+                        <b>↗</b>
+                    </a>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Donation CTA -->
+        <section class="donate-section" id="donate">
+            <div class="container donate-grid">
+
+                <div>
+                    <span class="eyebrow donate-eyebrow">
+                        YOUR KINDNESS COUNTS
+                    </span>
+
+                    <h2>
+                        A little help can
+                        <em>go a long way.</em>
+                    </h2>
+
+                    <p>
+                        Every act of kindness brings us closer to
+                        a future filled with possibility.
+                    </p>
+                </div>
+
+                <div class="donate-action">
+                    <a href="#contact" class="btn btn-light">
+                        Support Our Mission ↗
+                    </a>
+
+                    <small>
+                        Contact us to learn about verified ways to contribute.
+                    </small>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="section contact-section" id="contact">
+            <div class="container contact-grid">
+
+                <div class="contact-info">
+                    <span class="eyebrow">
+                        <span class="eyebrow-line"></span>
+                        SAY HELLO
+                    </span>
+
+                    <h2>
+                        Let's make good
+                        <em>things happen.</em>
+                    </h2>
+
+                    <p>
+                        Want to volunteer, support our work or explore
+                        a partnership? We'd love to hear from you.
+                    </p>
+
+                    <div class="contact-detail">
+                        <span>✉</span>
                         <div>
-                            <strong>Education For Everyone</strong>
-                            <p>Helping children learn and grow.</p>
+                            <small>EMAIL US</small>
+                            <strong>hello@umeedfoundation.org</strong>
                         </div>
                     </div>
 
-                    <div class="feature">
-                        <span>✓</span>
+                    <div class="contact-detail">
+                        <span>☎</span>
                         <div>
-                            <strong>Food & Essential Support</strong>
-                            <p>Supporting families in need.</p>
+                            <small>CALL US</small>
+                            <strong>+91 98765 43210</strong>
                         </div>
                     </div>
 
-                    <div class="feature">
-                        <span>✓</span>
+                    <div class="contact-detail">
+                        <span>⌖</span>
                         <div>
-                            <strong>Community Development</strong>
-                            <p>Creating opportunities for all.</p>
+                            <small>OUR LOCATION</small>
+                            <strong>Ghaziabad, Uttar Pradesh, India</strong>
                         </div>
                     </div>
-
                 </div>
 
-                <a href="#causes" class="btn btn-dark">
-                    Explore Our Work →
-                </a>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- Causes Section -->
-    <section class="causes section-padding" id="causes">
-
-        <div class="container">
-
-            <div class="section-heading">
-
-                <span class="section-label">WHAT WE DO</span>
-
-                <h2>
-                    Where Your <span>Kindness</span><br>
-                    Makes A Difference
-                </h2>
-
-                <p>
-                    Every contribution can help change someone's life.
-                    Choose a cause and become part of the change.
-                </p>
-
-            </div>
-
-            <div class="causes-grid">
-
-                <article class="cause-card">
-
-                    <div class="cause-image">
-                        <img
-                            src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=700&q=80"
-                            alt="Children learning">
-
-                        <span class="cause-number">01</span>
-                    </div>
-
-                    <div class="cause-content">
-
-                        <span class="cause-category">EDUCATION</span>
-
-                        <h3>Every Child Deserves To Learn</h3>
-
-                        <p>
-                            Help children access learning materials,
-                            educational resources and opportunities
-                            for a brighter future.
-                        </p>
-
-                        <a href="#donate" class="cause-link">
-                            Support Education <span>↗</span>
-                        </a>
-
-                    </div>
-
-                </article>
-
-
-                <article class="cause-card">
-
-                    <div class="cause-image">
-                        <img
-                            src="https://images.unsplash.com/photo-1593113598332-cd288d649433?auto=format&fit=crop&w=700&q=80"
-                            alt="Volunteers distributing food">
-
-                        <span class="cause-number">02</span>
-                    </div>
-
-                    <div class="cause-content">
-
-                        <span class="cause-category">FOOD SUPPORT</span>
-
-                        <h3>A Meal Can Bring Hope</h3>
-
-                        <p>
-                            Support food distribution initiatives
-                            and help families access nutritious
-                            meals and essential supplies.
-                        </p>
-
-                        <a href="#donate" class="cause-link">
-                            Provide A Meal <span>↗</span>
-                        </a>
-
-                    </div>
-
-                </article>
-
-
-                <article class="cause-card">
-
-                    <div class="cause-image">
-                        <img
-                            src="https://images.unsplash.com/photo-1531206715517-5c0ba140b2b8?auto=format&fit=crop&w=700&q=80"
-                            alt="Community volunteers working together">
-
-                        <span class="cause-number">03</span>
-                    </div>
-
-                    <div class="cause-content">
-
-                        <span class="cause-category">COMMUNITY CARE</span>
-
-                        <h3>Stronger Communities Together</h3>
-
-                        <p>
-                            Bring people together through volunteering,
-                            awareness programmes and community
-                            development initiatives.
-                        </p>
-
-                        <a href="#donate" class="cause-link">
-                            Join The Mission <span>↗</span>
-                        </a>
-
-                    </div>
-
-                </article>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- Call To Action -->
-    <section class="volunteer-section">
-
-        <div class="container volunteer-content">
-
-            <div>
-                <span class="section-label light-label">
-                    BECOME A CHANGE-MAKER
-                </span>
-
-                <h2>
-                    You Don't Need To Be<br>
-                    Rich To <span>Help Someone.</span>
-                </h2>
-
-                <p>
-                    Your time, kindness and support can make a real
-                    difference. Be part of something meaningful.
-                </p>
-            </div>
-
-            <div class="volunteer-actions">
-                <a href="#contact" class="btn btn-light">
-                    Become A Volunteer ↗
-                </a>
-
-                <a href="#donate" class="volunteer-link">
-                    Support Our Mission →
-                </a>
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- Donation Section -->
-    <section class="donation section-padding" id="donate">
-
-        <div class="container donation-grid">
-
-            <div class="donation-content">
-
-                <span class="section-label">YOUR SUPPORT MATTERS</span>
-
-                <h2>
-                    Give A Little.<br>
-                    <span>Change A Lot.</span>
-                </h2>
-
-                <p>
-                    Your generosity can help provide education,
-                    food and essential community support.
-                    Every contribution matters.
-                </p>
-
-                <div class="donation-promise">
-                    <span>♥</span>
-                    <p>Every act of kindness brings us closer to a better world.</p>
-                </div>
-
-            </div>
-
-
-            <div class="donation-card">
-
-                <div class="donation-card-header">
-                    <span>MAKE A DONATION</span>
-                    <span class="heart-icon">♡</span>
-                </div>
-
-                <h3>Choose Your Amount</h3>
-
-                <p>Select an amount to see its suggested impact.</p>
-
-                <div class="amount-options">
-
-                    <button class="amount-btn" data-amount="500">
-                        ₹500
+                <form class="contact-form" id="contactForm">
+
+                    <h3>Send Us a Message</h3>
+                    <p>Fill in the details and tell us how we can connect.</p>
+
+                    <label for="name">Your Name *</label>
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        placeholder="Enter your full name"
+                        required>
+
+                    <label for="email">Email Address *</label>
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="you@example.com"
+                        required>
+
+                    <label for="interest">I'm Interested In</label>
+                    <select id="interest" name="interest">
+                        <option>Volunteering</option>
+                        <option>Donating</option>
+                        <option>Partnership</option>
+                        <option>General Enquiry</option>
+                    </select>
+
+                    <label for="message">Your Message *</label>
+                    <textarea
+                        id="message"
+                        name="message"
+                        rows="4"
+                        placeholder="Write your message here..."
+                        required></textarea>
+
+                    <button type="submit" class="btn btn-primary form-button">
+                        Send Message ↗
                     </button>
 
-                    <button class="amount-btn active" data-amount="1000">
-                        ₹1,000
-                    </button>
+                    <p class="form-status" id="formStatus" aria-live="polite"></p>
 
-                    <button class="amount-btn" data-amount="2500">
-                        ₹2,500
-                    </button>
-
-                    <button class="amount-btn" data-amount="5000">
-                        ₹5,000
-                    </button>
-
-                </div>
-
-                <div class="donation-message" id="donationMessage">
-                    Your ₹1,000 contribution can support essential
-                    community needs.
-                </div>
-
-                <a href="#contact" class="btn btn-dark donation-button">
-                    Donate With Purpose ↗
-                </a>
-
-                <small class="donation-note">
-                    ♥ Your kindness can make a difference.
-                </small>
-
+                </form>
             </div>
+        </section>
 
-        </div>
-
-    </section>
-
-
-    <!-- Contact Section -->
-    <section class="contact section-padding" id="contact">
-
-        <div class="container contact-grid">
-
-            <div class="contact-content">
-
-                <span class="section-label">GET IN TOUCH</span>
-
-                <h2>
-                    Let's Make<br>
-                    <span>Good Things Happen.</span>
-                </h2>
-
-                <p>
-                    Interested in volunteering, partnering with us
-                    or supporting a cause? We'd love to hear from you.
-                </p>
-
-                <div class="contact-detail">
-                    <span>✉</span>
-                    <div>
-                        <strong>Email Us</strong>
-                        <p>hello@umeedfoundation.org</p>
-                    </div>
-                </div>
-
-                <div class="contact-detail">
-                    <span>☎</span>
-                    <div>
-                        <strong>Call Us</strong>
-                        <p>+91 98765 43210</p>
-                    </div>
-                </div>
-
-                <div class="contact-detail">
-                    <span>⌖</span>
-                    <div>
-                        <strong>Our Location</strong>
-                        <p>New Delhi, India</p>
-                    </div>
-                </div>
-
-            </div>
-
-
-            <form class="contact-form" id="contactForm">
-
-                <h3>Send Us A Message</h3>
-
-                <p>Fill in your details and we'll be happy to connect.</p>
-
-                <label for="name">Your Name</label>
-                <input type="text" id="name" placeholder="Enter your full name" required>
-
-                <label for="email">Email Address</label>
-                <input type="email" id="email" placeholder="Enter your email" required>
-
-                <label for="subject">I'm Interested In</label>
-
-                <select id="subject" required>
-                    <option value="">Select an option</option>
-                    <option>Volunteering</option>
-                    <option>Making a Donation</option>
-                    <option>Partnership</option>
-                    <option>General Enquiry</option>
-                </select>
-
-                <label for="message">Your Message</label>
-                <textarea id="message" rows="4"
-                          placeholder="Write your message..." required></textarea>
-
-                <button type="submit" class="btn btn-dark form-button">
-                    Send Message ↗
-                </button> 
-
-                <p id="formStatus" class="form-status" aria-live="polite"></p>
-
-            </form>
-
-        </div>
-
-    </section>
-
+    </main>
 
     <!-- Footer -->
     <footer class="footer">
+        <div class="container footer-main">
 
-        <div class="container footer-grid">
+            <a href="#home" class="logo footer-logo">
+                <span class="logo-icon">♥</span>
 
-            <div class="footer-about">
+                <span>
+                    <strong>umeed<span class="logo-dot">.</span></strong>
+                    <small>FOUNDATION</small>
+                </span>
+            </a>
 
-                <a href="#home" class="logo footer-logo">
-                    <span class="logo-icon">♡</span>
-                    <span>umeed<span class="logo-highlight">.</span>
-                        <small>FOUNDATION</small>
-                    </span>
-                </a>
-
-                <p>
-                    Spreading hope, sharing kindness and building
-                    a better future for every community.
-                </p>
-
-            </div>
+            <p>
+                Building brighter futures,<br>
+                one act of kindness at a time.
+            </p>
 
             <div class="footer-links">
-                <h4>Quick Links</h4>
-                <a href="#home">Home</a>
-                <a href="#about">About Us</a>
-                <a href="#causes">Our Causes</a>
-                <a href="#impact">Our Impact</a>
-            </div>
-
-            <div class="footer-links">
-                <h4>Get Involved</h4>
-                <a href="#donate">Donate</a>
-                <a href="#contact">Volunteer</a>
-                <a href="#contact">Partner With Us</a>
+                <a href="#about">About</a>
+                <a href="#programs">Our Work</a>
+                <a href="#get-involved">Volunteer</a>
                 <a href="#contact">Contact</a>
             </div>
 
-            <div class="footer-newsletter">
-
-                <h4>Stay Connected</h4>
-
-                <p>Get updates about our work and community initiatives.</p>
-
-                <form id="newsletterForm">
-                    <input type="email" id="newsletterEmail"
-                           placeholder="Your email address" required>
-
-                    <button type="submit" aria-label="Subscribe">
-                        →
-                    </button>
-                </form>
-
-                <p id="newsletterStatus" class="newsletter-status"
-                   aria-live="polite"></p>
-
-            </div>
+            <a href="#home" class="back-to-top" aria-label="Back to top">↑</a>
 
         </div>
 
-        <div class="footer-bottom">
-            <div class="container footer-bottom-inner">
-                <p>© <span id="currentYear"></span> Umeed Foundation. All rights reserved.</p>
-                <a href="#home">Made with ♥ for humanity</a>
-            </div>
+        <div class="container footer-bottom">
+            <p>© <span id="year"></span> Umeed Foundation. Website template.</p>
+            <p>Made with care <span>♥</span></p>
         </div>
-
     </footer>
 
     <script src="script.js"></script>
