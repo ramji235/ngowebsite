@@ -1,226 +1,127 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-    // =========================
+    // =================================
     // MOBILE NAVIGATION
-    // =========================
+    // =================================
 
     const menuToggle = document.getElementById("menuToggle");
     const navLinks = document.getElementById("navLinks");
 
+    function closeMenu() {
+
+        navLinks.classList.remove("open");
+
+        menuToggle.setAttribute("aria-expanded", "false");
+
+        menuToggle.setAttribute("aria-label", "Open navigation");
+
+        menuToggle.innerHTML =
+            '<i class="fa-solid fa-bars"></i>';
+
+    }
+
+
     menuToggle.addEventListener("click", function () {
 
-        navLinks.classList.toggle("open");
+        const isOpen = navLinks.classList.toggle("open");
 
-        const isOpen = navLinks.classList.contains("open");
+        menuToggle.setAttribute("aria-expanded", String(isOpen));
 
-        menuToggle.setAttribute("aria-expanded", isOpen);
+        menuToggle.setAttribute(
+            "aria-label",
+            isOpen ? "Close navigation" : "Open navigation"
+        );
 
-        menuToggle.textContent = isOpen ? "✕" : "☰";
+        menuToggle.innerHTML = isOpen
+            ? '<i class="fa-solid fa-xmark"></i>'
+            : '<i class="fa-solid fa-bars"></i>';
 
     });
 
 
-    // Close mobile navigation after clicking a link
+    // Close the mobile menu when a link is clicked.
 
     navLinks.querySelectorAll("a").forEach(function (link) {
 
-        link.addEventListener("click", function () {
-
-            navLinks.classList.remove("open");
-
-            menuToggle.setAttribute("aria-expanded", "false");
-
-            menuToggle.textContent = "☰";
-
-        });
+        link.addEventListener("click", closeMenu);
 
     });
 
 
-    // =========================
-    // ANIMATED IMPACT COUNTERS
-    // =========================
+    // Close the menu with the Escape key.
 
-    const counters = document.querySelectorAll(".counter");
+    document.addEventListener("keydown", function (event) {
 
-    function animateCounter(counter) {
-
-        const target = Number(counter.dataset.target);
-        const duration = 1600;
-        const startTime = performance.now();
-
-        function updateCounter(currentTime) {
-
-            const elapsed = currentTime - startTime;
-
-            const progress = Math.min(elapsed / duration, 1);
-
-            // Ease-out animation
-            const easedProgress = 1 - Math.pow(1 - progress, 3);
-
-            const currentValue = Math.floor(
-                easedProgress * target
-            );
-
-            counter.textContent = currentValue.toLocaleString("en-IN");
-
-            if (progress < 1) {
-
-                requestAnimationFrame(updateCounter);
-
-            } else {
-
-                counter.textContent = target.toLocaleString("en-IN");
-
-            }
-
+        if (event.key === "Escape") {
+            closeMenu();
         }
 
-        requestAnimationFrame(updateCounter);
+    });
 
+
+    // Reset mobile menu when switching to desktop.
+
+    window.addEventListener("resize", function () {
+
+        if (window.innerWidth > 760) {
+            closeMenu();
+        }
+
+    });
+
+
+    // =================================
+    // AUTOMATIC FOOTER YEAR
+    // =================================
+
+    const currentYear = document.getElementById("currentYear");
+
+    if (currentYear) {
+        currentYear.textContent = new Date().getFullYear();
     }
 
 
-    // Start the animation when counters become visible
+    // =================================
+    // IMAGE LOADING FALLBACK
+    // =================================
 
-    if ("IntersectionObserver" in window) {
+    const images = document.querySelectorAll("img");
 
-        const counterObserver = new IntersectionObserver(function (entries) {
+    images.forEach(function (img) {
 
-            entries.forEach(function (entry) {
+        img.addEventListener("error", function () {
 
-                if (entry.isIntersecting) {
+            img.classList.add("image-unavailable");
 
-                    animateCounter(entry.target);
-
-                    counterObserver.unobserve(entry.target);
-
-                }
-
-            });
-
-        }, {
-            threshold: 0.5
-        });
-
-        counters.forEach(function (counter) {
-
-            counterObserver.observe(counter);
-
-        });
-
-    } else {
-
-        counters.forEach(animateCounter);
-
-    }
-
-
-    // =========================
-    // DONATION AMOUNT SELECTION
-    // =========================
-
-    const amountButtons = document.querySelectorAll(".amount-btn");
-    const donationMessage = document.getElementById("donationMessage");
-
-    const donationImpacts = {
-
-        500: "Your ₹500 contribution can help provide basic learning or food essentials.",
-
-        1000: "Your ₹1,000 contribution can support essential community needs.",
-
-        2500: "Your ₹2,500 contribution can help support education and family assistance.",
-
-        5000: "Your ₹5,000 contribution can help fund larger community support initiatives."
-
-    };
-
-
-    amountButtons.forEach(function (button) {
-
-        button.addEventListener("click", function () {
-
-            amountButtons.forEach(function (item) {
-
-                item.classList.remove("active");
-
-            });
-
-            button.classList.add("active");
-
-            const amount = button.dataset.amount;
-
-            donationMessage.textContent = donationImpacts[amount];
+            img.alt = img.alt || "Image currently unavailable";
 
         });
 
     });
 
 
-    // =========================
-    // CONTACT FORM
-    // =========================
+    // =================================
+    // CURRENT PAGE NAVIGATION
+    // =================================
 
-    const contactForm = document.getElementById("contactForm");
-    const formStatus = document.getElementById("formStatus");
+    const currentPage = window.location.pathname
+        .split("/")
+        .pop() || "index.html";
 
-    contactForm.addEventListener("submit", function (event) {
+    document.querySelectorAll(".nav-links > a").forEach(function (link) {
 
-        event.preventDefault();
+        const linkPage = link.getAttribute("href").split("#")[0];
 
-        const name = document.getElementById("name").value.trim();
-        const email = document.getElementById("email").value.trim();
-        const subject = document.getElementById("subject").value;
-        const message = document.getElementById("message").value.trim();
+        if (linkPage === currentPage) {
 
-        if (!name || !email || !subject || !message) {
+            link.classList.add("active");
 
-            formStatus.textContent = "Please complete all fields.";
+        } else {
 
-            return;
+            link.classList.remove("active");
 
         }
 
-        formStatus.textContent =
-            "Your form is valid. Connect a backend or email service to send your message.";
-
     });
-
-
-    // =========================
-    // NEWSLETTER FORM
-    // =========================
-
-    const newsletterForm = document.getElementById("newsletterForm");
-
-    newsletterForm.addEventListener("submit", function (event) {
-
-        event.preventDefault();
-
-        const emailInput = document.getElementById("newsletterEmail");
-        const newsletterStatus = document.getElementById("newsletterStatus");
-
-        if (!emailInput.checkValidity()) {
-
-            emailInput.reportValidity();
-
-            return;
-
-        }
-
-        newsletterStatus.textContent =
-            "Email validated! Connect a mailing service to save your subscription.";
-
-        newsletterForm.reset();
-
-    });
-
-
-    // =========================
-    // FOOTER YEAR
-    // =========================
-
-    document.getElementById("currentYear").textContent =
-        new Date().getFullYear();
 
 });
