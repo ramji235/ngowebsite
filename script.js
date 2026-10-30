@@ -1,134 +1,226 @@
-// =====================================
-// 1. MOBILE NAVIGATION
-// =====================================
+document.addEventListener("DOMContentLoaded", function () {
 
-const menuToggle = document.getElementById("menuToggle");
-const navLinks = document.getElementById("navLinks");
+    // =========================
+    // MOBILE NAVIGATION
+    // =========================
 
-menuToggle.addEventListener("click", function () {
-    const isOpen = navLinks.classList.toggle("open");
+    const menuToggle = document.getElementById("menuToggle");
+    const navLinks = document.getElementById("navLinks");
 
-    menuToggle.setAttribute("aria-expanded", String(isOpen));
-    menuToggle.textContent = isOpen ? "✕" : "☰";
-});
+    menuToggle.addEventListener("click", function () {
 
-// Close mobile menu after clicking a navigation link
+        navLinks.classList.toggle("open");
 
-navLinks.querySelectorAll("a").forEach(function (link) {
-    link.addEventListener("click", function () {
-        navLinks.classList.remove("open");
-        menuToggle.setAttribute("aria-expanded", "false");
-        menuToggle.textContent = "☰";
+        const isOpen = navLinks.classList.contains("open");
+
+        menuToggle.setAttribute("aria-expanded", isOpen);
+
+        menuToggle.textContent = isOpen ? "✕" : "☰";
+
     });
-});
 
-// =====================================
-// 2. CURRENT YEAR IN FOOTER
-// =====================================
 
-const yearElement = document.getElementById("year");
+    // Close mobile navigation after clicking a link
 
-if (yearElement) {
-    yearElement.textContent = new Date().getFullYear();
-}
+    navLinks.querySelectorAll("a").forEach(function (link) {
 
-// =====================================
-// 3. ACTIVE NAVIGATION LINK
-// =====================================
+        link.addEventListener("click", function () {
 
-const sections = document.querySelectorAll("main section[id]");
-const navigationLinks = document.querySelectorAll(".nav-links a");
+            navLinks.classList.remove("open");
 
-function updateActiveNavigation() {
-    let currentSection = "home";
+            menuToggle.setAttribute("aria-expanded", "false");
 
-    sections.forEach(function (section) {
-        const sectionTop = section.offsetTop - 150;
+            menuToggle.textContent = "☰";
 
-        if (window.scrollY >= sectionTop) {
-            currentSection = section.id;
+        });
+
+    });
+
+
+    // =========================
+    // ANIMATED IMPACT COUNTERS
+    // =========================
+
+    const counters = document.querySelectorAll(".counter");
+
+    function animateCounter(counter) {
+
+        const target = Number(counter.dataset.target);
+        const duration = 1600;
+        const startTime = performance.now();
+
+        function updateCounter(currentTime) {
+
+            const elapsed = currentTime - startTime;
+
+            const progress = Math.min(elapsed / duration, 1);
+
+            // Ease-out animation
+            const easedProgress = 1 - Math.pow(1 - progress, 3);
+
+            const currentValue = Math.floor(
+                easedProgress * target
+            );
+
+            counter.textContent = currentValue.toLocaleString("en-IN");
+
+            if (progress < 1) {
+
+                requestAnimationFrame(updateCounter);
+
+            } else {
+
+                counter.textContent = target.toLocaleString("en-IN");
+
+            }
+
         }
-    });
 
-    navigationLinks.forEach(function (link) {
-        link.classList.remove("active");
+        requestAnimationFrame(updateCounter);
 
-        if (link.getAttribute("href") === "#" + currentSection) {
-            link.classList.add("active");
-        }
-    });
-}
-
-window.addEventListener("scroll", updateActiveNavigation);
-
-updateActiveNavigation();
-
-// =====================================
-// 4. CONTACT FORM
-// =====================================
-
-const contactForm = document.getElementById("contactForm");
-const formStatus = document.getElementById("formStatus");
-
-contactForm.addEventListener("submit", function (event) {
-    event.preventDefault();
-
-    if (!contactForm.checkValidity()) {
-        contactForm.reportValidity();
-        return;
     }
 
-    const name = document.getElementById("name").value.trim();
-    const email = document.getElementById("email").value.trim();
-    const interest = document.getElementById("interest").value;
-    const message = document.getElementById("message").value.trim();
 
-    if (!name || !email || !message) {
-        formStatus.textContent = "Please complete all required fields.";
-        return;
-    }
+    // Start the animation when counters become visible
 
-    // This is a frontend-only demo.
-    // No data is sent to a server by this form.
+    if ("IntersectionObserver" in window) {
 
-    formStatus.textContent =
-        "Thank you, " + name +
-        "! The form design is working, but message delivery is not configured yet.";
+        const counterObserver = new IntersectionObserver(function (entries) {
 
-    console.log("Contact form demo data:", {
-        name: name,
-        email: email,
-        interest: interest,
-        message: message
-    });
+            entries.forEach(function (entry) {
 
-    contactForm.reset();
-});
+                if (entry.isIntersecting) {
 
-// =====================================
-// 5. SMOOTH SCROLL FOR INTERNAL LINKS
-// =====================================
+                    animateCounter(entry.target);
 
-document.querySelectorAll('a[href^="#"]').forEach(function (link) {
-    link.addEventListener("click", function (event) {
-        const targetId = link.getAttribute("href");
+                    counterObserver.unobserve(entry.target);
 
-        if (!targetId || targetId === "#") {
-            return;
-        }
+                }
 
-        const target = document.querySelector(targetId);
-
-        if (target) {
-            event.preventDefault();
-
-            target.scrollIntoView({
-                behavior: "smooth",
-                block: "start"
             });
 
-            // Update URL hash without reloading the page.
-            history.replaceState(null, "", targetId);
-        }
+        }, {
+            threshold: 0.5
+        });
+
+        counters.forEach(function (counter) {
+
+            counterObserver.observe(counter);
+
+        });
+
+    } else {
+
+        counters.forEach(animateCounter);
+
+    }
+
+
+    // =========================
+    // DONATION AMOUNT SELECTION
+    // =========================
+
+    const amountButtons = document.querySelectorAll(".amount-btn");
+    const donationMessage = document.getElementById("donationMessage");
+
+    const donationImpacts = {
+
+        500: "Your ₹500 contribution can help provide basic learning or food essentials.",
+
+        1000: "Your ₹1,000 contribution can support essential community needs.",
+
+        2500: "Your ₹2,500 contribution can help support education and family assistance.",
+
+        5000: "Your ₹5,000 contribution can help fund larger community support initiatives."
+
+    };
+
+
+    amountButtons.forEach(function (button) {
+
+        button.addEventListener("click", function () {
+
+            amountButtons.forEach(function (item) {
+
+                item.classList.remove("active");
+
+            });
+
+            button.classList.add("active");
+
+            const amount = button.dataset.amount;
+
+            donationMessage.textContent = donationImpacts[amount];
+
+        });
+
     });
+
+
+    // =========================
+    // CONTACT FORM
+    // =========================
+
+    const contactForm = document.getElementById("contactForm");
+    const formStatus = document.getElementById("formStatus");
+
+    contactForm.addEventListener("submit", function (event) {
+
+        event.preventDefault();
+
+        const name = document.getElementById("name").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const subject = document.getElementById("subject").value;
+        const message = document.getElementById("message").value.trim();
+
+        if (!name || !email || !subject || !message) {
+
+            formStatus.textContent = "Please complete all fields.";
+
+            return;
+
+        }
+
+        formStatus.textContent =
+            "Your form is valid. Connect a backend or email service to send your message.";
+
+    });
+
+
+    // =========================
+    // NEWSLETTER FORM
+    // =========================
+
+    const newsletterForm = document.getElementById("newsletterForm");
+
+    newsletterForm.addEventListener("submit", function (event) {
+
+        event.preventDefault();
+
+        const emailInput = document.getElementById("newsletterEmail");
+        const newsletterStatus = document.getElementById("newsletterStatus");
+
+        if (!emailInput.checkValidity()) {
+
+            emailInput.reportValidity();
+
+            return;
+
+        }
+
+        newsletterStatus.textContent =
+            "Email validated! Connect a mailing service to save your subscription.";
+
+        newsletterForm.reset();
+
+    });
+
+
+    // =========================
+    // FOOTER YEAR
+    // =========================
+
+    document.getElementById("currentYear").textContent =
+        new Date().getFullYear();
+
 });
