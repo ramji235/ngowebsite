@@ -16,6 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     menuToggle.addEventListener("click", function () {
 
+        
         const isOpen = navLinks.classList.toggle("open");
 
         menuToggle.setAttribute("aria-expanded", String(isOpen));
