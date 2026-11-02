@@ -15,9 +15,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
         menuToggle.setAttribute("aria-label", "Open navigation");
 
-        menuToggle.innerHTML =
-            '<i class="fa-solid fa-bars"></i>';
-
     }
 
 
@@ -31,10 +28,6 @@ document.addEventListener("DOMContentLoaded", function () {
             "aria-label",
             isOpen ? "Close navigation" : "Open navigation"
         );
-
-        menuToggle.innerHTML = isOpen
-            ? '<i class="fa-solid fa-xmark"></i>'
-            : '<i class="fa-solid fa-bars"></i>';
 
     });
 

@@ -1,753 +1,169 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <meta name="description"
-        content="Discover our mission to support education, healthcare, community welfare and environmental protection. Join us to create a better future.">
-
-    <title>Hope Foundation | Together We Can</title>
-
-    <link rel="style" href="style.css">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link href="style.css" rel="stylesheet">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <meta name="description" content="Pragati Kalyan Samiti is a registered NGO working for healthcare, education, women empowerment, legal awareness, culture and sustainable development since 2009.">
+    <meta name="theme-color" content="#9d1724">
+    <title>Pragati Kalyan Samiti | Registered NGO Since 2009</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-
-    <!-- ================= HEADER ================= -->
+    <div class="topbar">
+        <div class="container topbar-inner">
+            <span>Registered NGO · Working since 2009</span>
+            <a href="mailto:pragatikalyansamiti4you@gmail.com">pragatikalyansamiti4you@gmail.com</a>
+        </div>
+    </div>
 
     <header class="header">
-
         <div class="container navbar">
-
-            <a href="index.html" class="logo">
-
-                <span class="logo-icon">
-                    <i class="fa-solid fa-hands-holding-child"></i>
-                </span>
-
+            <a href="index.html" class="logo" aria-label="Pragati Kalyan Samiti home">
+                <img src="images/pragati-kalyan-logo.png" alt="Pragati Kalyan Samiti logo">
                 <span class="logo-text">
-                    Hope<span>Foundation</span>
-                    <small>TOGETHER WE CAN</small>
+                    <strong>प्रगति कल्याण समिति <span>(रजि.)</span></strong>
+                    <small>PRAGATI KALYAN SAMITI</small>
                 </span>
-
             </a>
-
             <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">
-
-                <i class="fa-solid fa-bars"></i>
-
+                <span></span><span></span><span></span>
             </button>
-
-            <nav class="nav-links" id="navLinks">
-
-                <a href="index.html" class="active">Home</a>
-
+            <nav class="nav-links" id="navLinks" aria-label="Main navigation">
+                <a class="active" href="index.html">Home</a>
                 <a href="about.html">About Us</a>
-
-                <a href="causes.html">Our Causes</a>
-
-                <a href="programs.html">Our Programs</a>
-
-                <a href="contact.html">Contact</a>
-
-                <a href="contact.html#donate" class="btn btn-primary nav-donate">
-
-                    Support Us
-                    <i class="fa-solid fa-arrow-right"></i>
-
-                </a>
-
+                <a href="#activities">Our Activities</a>
+                <a href="#impact">Our Impact</a>
+                <a class="nav-contact" href="#contact">Contact Us</a>
             </nav>
-
         </div>
-
     </header>
 
-
     <main>
-
-        <!-- ================= HERO SECTION ================= -->
-
         <section class="hero">
-
-            <div class="hero-background"></div>
-
-            <div class="container hero-container">
-
+            <div class="container hero-grid">
                 <div class="hero-content">
-
-                    <span class="eyebrow">
-                        <span></span>
-                        CREATING HOPE, CHANGING LIVES
-                    </span>
-
-                    <h1>
-                        Small Acts Can
-                        Create <span>Big Changes.</span>
-                    </h1>
-
-                    <p class="hero-description">
-
-                        Together, we can help children learn,
-                        support families in need, improve access
-                        to healthcare and build a greener future.
-
-                        Every act of kindness brings us one
-                        step closer to a better world.
-
-                    </p>
-
-                    <div class="hero-buttons">
-
-                        <a href="causes.html" class="btn btn-primary">
-
-                            Explore Our Causes
-                            <i class="fa-solid fa-arrow-right"></i>
-
-                        </a>
-
-                        <a href="about.html" class="btn btn-outline">
-
-                            Discover Our Mission
-                            <i class="fa-solid fa-play"></i>
-
-                        </a>
-
+                    <p class="eyebrow"><span></span> ALL INDIA NGO · SINCE 2009</p>
+                    <h1>Working together for a <em>healthier, empowered</em> India.</h1>
+                    <p class="hero-copy">Pragati Kalyan Samiti is a non-profit organization committed to inclusive social development and the wellbeing of underprivileged communities.</p>
+                    <div class="hero-actions">
+                        <a class="button button-primary" href="#activities">Explore our activities <span aria-hidden="true">&rarr;</span></a>
+                        <a class="button button-outline" href="about.html">Our vision &amp; mission</a>
                     </div>
-
-                    <div class="hero-note">
-
-                        <span class="note-icon">
-                            <i class="fa-solid fa-heart"></i>
-                        </span>
-
-                        <div>
-                            <strong>Every Helping Hand Matters</strong>
-
-                            <p>
-                                Be part of a positive change.
-                            </p>
-                        </div>
-
-                    </div>
-
+                    <p class="hero-note">Healthcare · Education · Women empowerment · Social justice</p>
                 </div>
-
-
                 <div class="hero-visual">
-
-                    <div class="hero-image-main">
-
-                        <img src="images/homeimage.jpg"
-                            alt="Community volunteers working together" fetchpriority="high">
-
-                    </div>
-
-                    <div class="floating-card">
-
-                        <div class="floating-icon">
-                            <i class="fa-solid fa-hands-holding-child"></i>
-                        </div>
-
-                        <div>
-                            <strong>Be the Difference</strong>
-                            <p>Help create a brighter tomorrow.</p>
-                        </div>
-
-                    </div>
-
-                    <div class="decor-circle"></div>
-
+                    <img src="images/homeimage.jpg" alt="Community members and volunteers working together">
+                    <div class="hero-stamp"><strong>2009</strong><span>Serving communities<br>since</span></div>
                 </div>
-
             </div>
-
         </section>
 
-
-        <!-- ================= INTRODUCTION ================= -->
-
-        <section class="intro-section section-padding">
-
+        <section class="intro section-space">
             <div class="container intro-grid">
-
-                <div class="intro-image">
-
-                    <img src="https://images.unsplash.com/photo-1509099836639-18ba1795216d?auto=format&fit=crop&w=900&q=85"
-                        alt="Children learning and participating in community activities" loading="lazy">
-
-                    <div class="image-caption">
-
-                        <i class="fa-solid fa-seedling"></i>
-
-                        <div>
-                            <strong>Growing Together</strong>
-                            <span>Building a brighter future</span>
-                        </div>
-
-                    </div>
-
+                <div class="intro-photo">
+                    <img src="images/littlekindness.jpg" alt="Children taking part in a community learning activity" loading="lazy">
+                    <span class="photo-caption">Inclusive social development across India</span>
                 </div>
-
-
-                <div class="intro-content">
-
-                    <span class="eyebrow">
-                        <span></span>
-                        WHO WE ARE
-                    </span>
-
-                    <h2>
-                        A Little Kindness
-                        Goes a <span>Long Way.</span>
-                    </h2>
-
-                    <p>
-                        Hope Foundation is presented here as a
-                        community-focused NGO website dedicated
-                        to social welfare, equal opportunities
-                        and sustainable development.
-                    </p>
-
-                    <p>
-                        Our focus is on creating opportunities
-                        through education, supporting access to
-                        essential healthcare, helping communities
-                        and encouraging environmental awareness.
-                    </p>
-
-                    <div class="intro-points">
-
-                        <div class="intro-point">
-                            <i class="fa-solid fa-circle-check"></i>
-                            <span>Supporting education and learning</span>
-                        </div>
-
-                        <div class="intro-point">
-                            <i class="fa-solid fa-circle-check"></i>
-                            <span>Encouraging community wellbeing</span>
-                        </div>
-
-                        <div class="intro-point">
-                            <i class="fa-solid fa-circle-check"></i>
-                            <span>Promoting a sustainable future</span>
-                        </div>
-
-                    </div>
-
-                    <a href="about.html" class="text-link">
-
-                        Learn More About Us
-                        <i class="fa-solid fa-arrow-right"></i>
-
-                    </a>
-
+                <div class="intro-copy">
+                    <p class="eyebrow"><span></span> WHO WE ARE</p>
+                    <h2>Progress rooted in <em>care and opportunity.</em></h2>
+                    <p>Since its inception, Pragati Kalyan Samiti has worked across healthcare, education, women empowerment, legal awareness, environmental sustainability and skill development.</p>
+                    <p>Our work focuses on helping people access opportunities, strengthen their communities and build a more self-reliant future.</p>
+                    <a class="text-link" href="about.html">Learn more about us <span aria-hidden="true">&rarr;</span></a>
                 </div>
-
             </div>
-
         </section>
 
-
-        <!-- ================= CAUSES SECTION ================= -->
-
-        <section class="causes-section section-padding">
-
+        <section class="purpose section-space">
             <div class="container">
-
                 <div class="section-heading">
-
-                    <div>
-
-                        <span class="eyebrow">
-                            <span></span>
-                            MAKE A DIFFERENCE
-                        </span>
-
-                        <h2>
-                            Causes That Need
-                            <span>Your Kindness.</span>
-                        </h2>
-
-                    </div>
-
-                    <div class="heading-right">
-
-                        <p>
-                            Choose a cause that matters to you.
-                            Your time, support and compassion
-                            can help make a positive difference.
-                        </p>
-
-                        <a href="causes.html" class="text-link">
-
-                            View All Causes
-                            <i class="fa-solid fa-arrow-right"></i>
-
-                        </a>
-
-                    </div>
-
+                    <p class="eyebrow"><span></span> OUR PURPOSE</p>
+                    <h2>A shared vision for <em>lasting progress.</em></h2>
                 </div>
-
-
-                <div class="causes-grid">
-
-                    <!-- Education -->
-
-                    <article class="cause-card">
-
-                        <div class="cause-image">
-
-                            <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=800&q=80"
-                                alt="Students learning together" loading="lazy">
-
-                            <span class="cause-number">01</span>
-
-                        </div>
-
-                        <div class="cause-content">
-
-                            <span class="cause-category">
-                                <i class="fa-solid fa-book-open"></i>
-                                EDUCATION
-                            </span>
-
-                            <h3>Education for Every Child</h3>
-
-                            <p>
-                                Encourage learning and help create
-                                educational opportunities for
-                                children and young people.
-                            </p>
-
-                            <a href="causes.html" class="cause-link">
-
-                                Explore Cause
-                                <i class="fa-solid fa-arrow-right"></i>
-
-                            </a>
-
-                        </div>
-
+                <div class="purpose-grid">
+                    <article class="purpose-card">
+                        <span class="card-mark">01</span>
+                        <h3>Our Vision</h3>
+                        <p>To build a healthy, empowered and self-reliant society.</p>
                     </article>
-
-
-                    <!-- Healthcare -->
-
-                    <article class="cause-card">
-
-                        <div class="cause-image">
-
-                            <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=800&q=80"
-                                alt="Healthcare professional providing care" loading="lazy">
-
-                            <span class="cause-number">02</span>
-
-                        </div>
-
-                        <div class="cause-content">
-
-                            <span class="cause-category">
-                                <i class="fa-solid fa-heart-pulse"></i>
-                                HEALTHCARE
-                            </span>
-
-                            <h3>Health and Wellbeing</h3>
-
-                            <p>
-                                Promote health awareness and support
-                                better access to essential care
-                                within communities.
-                            </p>
-
-                            <a href="causes.html" class="cause-link">
-
-                                Explore Cause
-                                <i class="fa-solid fa-arrow-right"></i>
-
-                            </a>
-
-                        </div>
-
+                    <article class="purpose-card">
+                        <span class="card-mark">02</span>
+                        <h3>Our Mission</h3>
+                        <p>Provide accessible healthcare and education, empower women and marginalized communities, promote legal awareness and social justice, and preserve Indian culture and traditional knowledge systems.</p>
                     </article>
-
-
-                    <!-- Environment -->
-
-                    <article class="cause-card">
-
-                        <div class="cause-image">
-
-                            <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=800&q=80"
-                                alt="Green forest and natural environment" loading="lazy">
-
-                            <span class="cause-number">03</span>
-
-                        </div>
-
-                        <div class="cause-content">
-
-                            <span class="cause-category">
-                                <i class="fa-solid fa-leaf"></i>
-                                ENVIRONMENT
-                            </span>
-
-                            <h3>A Greener Tomorrow</h3>
-
-                            <p>
-                                Encourage environmental awareness,
-                                cleaner surroundings and responsible
-                                care for our planet.
-                            </p>
-
-                            <a href="causes.html" class="cause-link">
-
-                                Explore Cause
-                                <i class="fa-solid fa-arrow-right"></i>
-
-                            </a>
-
-                        </div>
-
+                    <article class="purpose-card purpose-image">
+                        <img src="images/volunteer.jpg" alt="Volunteers supporting their community" loading="lazy">
+                        <div><strong>Community-led action</strong><span>Working towards opportunity for all</span></div>
                     </article>
-
                 </div>
-
             </div>
-
         </section>
 
-
-        <!-- ================= MISSION SECTION ================= -->
-
-        <section class="mission-section section-padding">
-
-            <div class="container mission-grid">
-
-                <div class="mission-content">
-
-                    <span class="eyebrow light-eyebrow">
-                        <span></span>
-                        OUR MISSION
-                    </span>
-
-                    <h2>
-                        Together, We Can
-                        Build a Better <span>World.</span>
-                    </h2>
-
-                    <p>
-                        A better future begins when people come
-                        together with compassion, responsibility
-                        and a shared commitment to helping others.
-                    </p>
-
-                    <p>
-                        By encouraging participation, raising
-                        awareness and supporting meaningful
-                        initiatives, we can work toward a more
-                        inclusive and sustainable society.
-                    </p>
-
-                    <a href="about.html" class="btn btn-white">
-
-                        Discover Our Mission
-                        <i class="fa-solid fa-arrow-right"></i>
-
-                    </a>
-
-                </div>
-
-
-                <div class="mission-visual">
-
-                    <img src="https://images.unsplash.com/photo-1559027615-cd4628902d4a?auto=format&fit=crop&w=1000&q=85"
-                        alt="Volunteers joining hands to support a cause" loading="lazy">
-
-                    <div class="mission-badge">
-
-                        <i class="fa-solid fa-heart"></i>
-
-                        <strong>Compassion</strong>
-
-                        <span>In Action</span>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- ================= OUR APPROACH ================= -->
-
-        <section class="approach-section section-padding">
-
+        <section class="activities section-space" id="activities">
             <div class="container">
-
-                <div class="center-heading">
-
-                    <span class="eyebrow">
-                        <span></span>
-                        HOW WE MAKE A DIFFERENCE
-                    </span>
-
-                    <h2>
-                        Turning Good Intentions
-                        Into <span>Positive Action.</span>
-                    </h2>
-
-                    <p>
-                        Lasting change starts with understanding
-                        needs, working together and taking
-                        thoughtful action.
-                    </p>
-
+                <div class="section-heading section-heading-row">
+                    <div>
+                        <p class="eyebrow"><span></span> WHAT WE DO</p>
+                        <h2>Activities that strengthen <em>communities.</em></h2>
+                    </div>
+                    <p class="section-intro">Our ongoing and past programs reflect the activities and timelines shared by Pragati Kalyan Samiti.</p>
                 </div>
-
-
-                <div class="approach-grid">
-
-                    <article class="approach-card">
-
-                        <div class="approach-icon">
-                            <i class="fa-solid fa-ear-listen"></i>
-                        </div>
-
-                        <span class="step-number">STEP 01</span>
-
-                        <h3>Understand</h3>
-
-                        <p>
-                            Listen to community needs and identify
-                            where meaningful support can help.
-                        </p>
-
-                    </article>
-
-
-                    <article class="approach-card">
-
-                        <div class="approach-icon">
-                            <i class="fa-solid fa-people-group"></i>
-                        </div>
-
-                        <span class="step-number">STEP 02</span>
-
-                        <h3>Collaborate</h3>
-
-                        <p>
-                            Encourage people, volunteers and
-                            partners to work toward shared goals.
-                        </p>
-
-                    </article>
-
-
-                    <article class="approach-card">
-
-                        <div class="approach-icon">
-                            <i class="fa-solid fa-seedling"></i>
-                        </div>
-
-                        <span class="step-number">STEP 03</span>
-
-                        <h3>Create Change</h3>
-
-                        <p>
-                            Support thoughtful initiatives that
-                            can contribute to lasting progress.
-                        </p>
-
-                    </article>
-
+                <div class="activity-grid">
+                    <article class="activity-card"><span>01</span><h3>Monthly Health Check-up Camps</h3><p>Since 2012</p></article>
+                    <article class="activity-card"><span>02</span><h3>Skill Development Programs</h3><p>Since 2015</p></article>
+                    <article class="activity-card"><span>03</span><h3>Legal Awareness Programs</h3><p>2014–2026</p></article>
+                    <article class="activity-card"><span>04</span><h3>Women Empowerment Initiatives</h3><p>2012–2026</p></article>
+                    <article class="activity-card"><span>05</span><h3>Promotion of Indian Culture</h3><p>Since 2011</p></article>
+                    <article class="activity-card"><span>06</span><h3>Indian System of Medicine &amp; Support for the Poor</h3><p>2014–2017</p></article>
+                    <article class="activity-card"><span>07</span><h3>Environmental Awareness Program</h3><p>2013</p></article>
+                    <article class="activity-card"><span>08</span><h3>Educational Support Programs</h3><p>Since 2012</p></article>
                 </div>
-
             </div>
-
         </section>
 
-
-        <!-- ================= VOLUNTEER CTA ================= -->
-
-        <section class="volunteer-section">
-
-            <div class="container volunteer-wrapper">
-
-                <div class="volunteer-icon">
-                    <i class="fa-solid fa-hands-holding-child"></i>
+        <section class="impact section-space" id="impact">
+            <div class="container impact-grid">
+                <div>
+                    <p class="eyebrow"><span></span> OUR IMPACT</p>
+                    <h2>Creating change that <em>matters.</em></h2>
+                    <p class="impact-copy">Our work is focused on practical, lasting improvements in the lives of people and communities.</p>
                 </div>
-
-                <div class="volunteer-content">
-
-                    <span>BE PART OF THE CHANGE</span>
-
-                    <h2>
-                        Your Time Can Change a Life.
-                    </h2>
-
-                    <p>
-                        Join a community that believes in kindness,
-                        opportunity and a better tomorrow.
-                    </p>
-
-                </div>
-
-                <div class="volunteer-action">
-
-                    <a href="contact.html" class="btn btn-white">
-
-                        Get Involved
-                        <i class="fa-solid fa-arrow-right"></i>
-
-                    </a>
-
-                </div>
-
+                <ul class="impact-list">
+                    <li>Improved access to healthcare</li>
+                    <li>Enhanced livelihood opportunities</li>
+                    <li>Increased legal awareness</li>
+                    <li>Strengthened women empowerment</li>
+                    <li>Encouraged environmental responsibility</li>
+                </ul>
             </div>
-
         </section>
 
+        <section class="contact section-space" id="contact">
+            <div class="container contact-grid">
+                <div class="contact-copy">
+                    <p class="eyebrow"><span></span> GET IN TOUCH</p>
+                    <h2>Let’s work for a <em>better tomorrow.</em></h2>
+                    <p>Contact Pragati Kalyan Samiti to learn more about our work and activities.</p>
+                </div>
+                <div class="contact-card">
+                    <h3>Pragati Kalyan Samiti (Regd.)</h3>
+                    <p class="contact-address">Office: C-20, Gali No. 2, Jagatpuri Ext., Delhi – 110093</p>
+                    <a href="tel:+919711419868">+91 97114 19868</a>
+                    <a href="tel:+919873416526">+91 98734 16526</a>
+                    <a href="mailto:pragatikalyansamiti4you@gmail.com">pragatikalyansamiti4you@gmail.com</a>
+                    <a href="https://www.pragatikalyansamiti.org">www.pragatikalyansamiti.org</a>
+                </div>
+            </div>
+        </section>
     </main>
 
-
-    <!-- ================= FOOTER ================= -->
-
     <footer class="footer">
-
-        <div class="container footer-grid">
-
-            <div class="footer-brand">
-
-                <a href="index.html" class="logo footer-logo">
-
-                    <span class="logo-icon">
-                        <i class="fa-solid fa-hands-holding-child"></i>
-                    </span>
-
-                    <span class="logo-text">
-                        Hope<span>Foundation</span>
-                        <small>TOGETHER WE CAN</small>
-                    </span>
-
-                </a>
-
-                <p>
-                    Working toward a world where people have
-                    opportunities to learn, live with dignity
-                    and build a better future.
-                </p>
-
-                <div class="social-links">
-
-                    <a href="contact.html" aria-label="Facebook">
-
-                        <i class="fa-brands fa-facebook-f"></i>
-
-                    </a>
-
-                    <a href="contact.html" aria-label="Instagram">
-
-                        <i class="fa-brands fa-instagram"></i>
-
-                    </a>
-
-                    <a href="contact.html" aria-label="LinkedIn">
-
-                        <i class="fa-brands fa-linkedin-in"></i>
-
-                    </a>
-
-                </div>
-
-            </div>
-
-
-            <div class="footer-column">
-
-                <h3>Quick Links</h3>
-
-                <a href="index.html">Home</a>
-                <a href="about.html">About Us</a>
-                <a href="causes.html">Our Causes</a>
-                <a href="programs.html">Our Programs</a>
-                <a href="contact.html">Contact</a>
-
-            </div>
-
-
-            <div class="footer-column">
-
-                <h3>Our Focus</h3>
-
-                <a href="causes.html">Education</a>
-                <a href="causes.html">Healthcare</a>
-                <a href="causes.html">Environment</a>
-                <a href="causes.html">Community Welfare</a>
-
-            </div>
-
-
-            <div class="footer-column footer-contact">
-
-                <h3>Get Involved</h3>
-
-                <p>
-                    <i class="fa-solid fa-heart"></i>
-                    Support a cause
-                </p>
-
-                <p>
-                    <i class="fa-solid fa-people-group"></i>
-                    Become a volunteer
-                </p>
-
-                <a href="contact.html">
-                    <i class="fa-solid fa-envelope"></i>
-                    Contact Our Team
-                </a>
-
-            </div>
-
+        <div class="container footer-inner">
+            <a class="footer-brand" href="index.html">Pragati Kalyan Samiti <span>(Regd.)</span></a>
+            <p>Inclusive social development across India · Since 2009</p>
+            <small>&copy; <span id="currentYear">2026</span> Pragati Kalyan Samiti. All rights reserved.</small>
         </div>
-
-
-        <div class="footer-bottom">
-
-            <div class="container footer-bottom-inner">
-
-                <p>
-                    &copy; <span id="currentYear"></span>
-                    Hope Foundation. All rights reserved.
-                </p>
-
-                <p>
-                    Made with
-                    <i class="fa-solid fa-heart"></i>
-                    for a better world.
-                </p>
-
-            </div>
-
-        </div>
-
     </footer>
-
-
     <script src="script.js"></script>
-
 </body>
-
 </html>
