@@ -163,6 +163,13 @@ h2 { margin-bottom: 19px; font-size: clamp(32px, 4vw, 46px); }
 .contact-card a:hover { text-decoration: underline; }
 .contact-card .contact-address { margin: 0 0 8px; color: var(--muted); font-size: 13px; }
 
+.payment { background: var(--paper); }
+.payment-card { display: grid; grid-template-columns: 1fr minmax(240px, 360px); align-items: center; gap: 48px; padding: 34px; border: 1px solid var(--line); background: white; }
+.payment-card h2 { margin-bottom: 14px; }
+.payment-card p:not(.eyebrow) { color: var(--muted); font-size: 14px; }
+.payment-card .payment-vpa { margin: 0; color: var(--red); font-weight: 700; overflow-wrap: anywhere; }
+.payment-card img { width: 100%; height: auto; justify-self: center; border: 1px solid var(--line); }
+
 .page-hero { padding: 76px 0 82px; text-align: center; background: linear-gradient(120deg, #fffdfa, #fbf1f1); border-bottom: 5px solid var(--red); }
 .page-hero-inner { max-width: 800px; }
 .page-hero .eyebrow { justify-content: center; }
@@ -211,6 +218,8 @@ h2 { margin-bottom: 19px; font-size: clamp(32px, 4vw, 46px); }
     .nav-links a { padding: 11px 5px; }
     .nav-links .nav-contact { margin-top: 4px; text-align: center; }
     .hero-grid, .intro-grid, .impact-grid, .contact-grid, .story-grid { grid-template-columns: 1fr; gap: 34px; }
+    .payment-card { grid-template-columns: 1fr; gap: 24px; padding: 23px; }
+    .payment-card img { max-width: 360px; }
     .hero-grid { padding-top: 55px; padding-bottom: 57px; }
     h1 { font-size: clamp(39px, 11vw, 55px); }
     h2 { font-size: clamp(31px, 8vw, 40px); }
